@@ -26,3 +26,16 @@ body {
 .sansserif {
 font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 300%;
+	color: #ffffff
+}
+
+p {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 80%;
+	color: #ffffff
+
+}
