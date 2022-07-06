@@ -64,7 +64,7 @@ img {
   box-sizing: border-box;
   color: #f07aa5;
   font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-size: clamp(2rem, 4vw, 3rem);
   justify-content: center;
   line-height: 1em;
   max-width: 100%;
