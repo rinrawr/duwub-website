@@ -63,7 +63,6 @@ img {
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #f07aa5;
-  display: flex;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   justify-content: center;
@@ -77,6 +76,7 @@ img {
   touch-action: manipulation;
   white-space: nowrap;
   cursor: pointer;
+	display: flex;
 }
 
 .button-64:active,
@@ -100,6 +100,10 @@ img {
 @media (min-width: 768px) {
   .button-64 {
     font-size: 24px;
-    min-width: 196px;
+    min-width: 250px;
   }
+}
+
+.action_btn {
+
 }
