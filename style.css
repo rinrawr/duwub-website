@@ -79,7 +79,7 @@ button {
   margin:20px;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #e403a0;
 }
 button:focus,
 button:focus-visible {
@@ -100,7 +100,7 @@ button:focus-visible {
 }
 
 ::selection {
-  background-color: rgb(145, 13, 175);
+  background-color: rgb(175, 13, 37);
 }
 
 section {
