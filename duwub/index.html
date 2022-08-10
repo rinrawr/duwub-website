@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>duwub</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+
+  </head>
+  <body>
+    
+    <div id="app">
+        <section>
+          <h1>duwub</h1>
+          <div class="btn-group">
+            <button onclick="window.location.href='https://www.youtube.com/channel/UCvwfhL8Wuj-8G1_6hdXjOGA';">Youtube</button>
+            <button onclick="window.location.href='https://mintable.app/u/chiaseeds';">Chia Seeds</button>
+          </div>
+        </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+
+
+
+    <div id="vantajs"></div>
+
+
+    <script>
+      VANTA.HALO({
+        el: "#vantajs",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        size: 1.20,
+      });
+      </script>
+      
+
+  </body>
+</html>
+
+
