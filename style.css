@@ -117,7 +117,7 @@ section {
 section h1 {
   color: #fff;
   font-size: calc(4rem + 12vw);
-  mix-blend-mode: difference;
+  mix-blend-mode: overlay;
 }
 
 span {
