@@ -118,6 +118,7 @@ section h1 {
   color: #fff;
   font-size: calc(4rem + 12vw);
   mix-blend-mode: overlay;
+  animation: fadeIn 1s ease-in-out;
 }
 
 span {
@@ -155,4 +156,34 @@ span {
   align-items: center;
   text-align: center;
   z-index: 2;
+  animation: fadeInDelay 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDelay {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
