@@ -1,7 +1,3 @@
-import * as THREE from "three"
-import HALO from "vanta.halo.min.js"
-import "./style.css"
-
 VANTA.HALO({
   el: "#vantajs",
   mouseControls: true,
