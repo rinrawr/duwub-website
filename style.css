@@ -258,3 +258,54 @@ transition: 0.5s;
 img:hover{
   transform: scale(1.2);
 }
+
+/* ---MOBILE--- */
+
+@media screen and (max-width: 768px) {
+
+  .topbar {
+    padding: 10px 20px;
+  }
+
+  .topbar img {
+    height: 30px;
+  }
+
+  .topbar ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #222;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topbar ul li {
+    margin: 10px 0;
+  }
+
+  .topbar ul li a {
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+  .topbar.active ul {
+    display: flex;
+  }
+
+  .toggle {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url('menu-icon.png');
+    background-size: cover;
+  }
+
+}
