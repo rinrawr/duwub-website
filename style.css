@@ -130,7 +130,7 @@ section h1 {
 
 section h2 {
   color: #fff;
-  font-size: calc(1rem + 2vw);
+  font-size: calc(1rem + 1.8vw);
   mix-blend-mode: exclusion;
   animation: fadeIn 3s ease-in-out;
 }
