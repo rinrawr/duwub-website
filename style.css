@@ -45,6 +45,13 @@ h1 {
   z-index:2;
 }
 
+h2 {
+  font-size: 2em;
+  line-height: 1.2;
+  z-index:2;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -68,7 +75,7 @@ h1 {
 button {
   border-radius: 8px;
   border: 3px inset transparent;
-  padding: 0.6em 1.0em;
+  padding: 0.6em 1.5em;
   font-size: 1.2em;
   font-weight: 500;
   font-family: inherit;
@@ -76,7 +83,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   z-index:2;
-  margin:20px;
+  margin:40px;
 }
 button:hover {
   border-color: #e403a0;
@@ -119,6 +126,13 @@ section h1 {
   font-size: calc(4rem + 12vw);
   mix-blend-mode: overlay;
   animation: fadeIn 1s ease-in-out;
+}
+
+section h2 {
+  color: #fff;
+  font-size: calc(1rem + 2vw);
+  mix-blend-mode: exclusion;
+  animation: fadeIn 3s ease-in-out;
 }
 
 span {
@@ -186,4 +200,61 @@ span {
     opacity: 1;
     transform: translateY(0%);
   }
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  background-color: transparent;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeInDelay 3s ease-in-out;
+}
+
+.topbar img {
+  height: 40px;
+}
+
+.topbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.topbar ul li {
+  margin-left: 20px;
+  
+}
+
+.topbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.topbar ul li a:hover {
+  color: #e403a0;
+  cursor: pointer;
+  transition: 1s;
+  transform: scale(1.2);
+}
+
+img{
+border-radius: 50%;
+transition: 0.5s;
+}
+
+img:hover{
+  transform: scale(1.2);
 }
