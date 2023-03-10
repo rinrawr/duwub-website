@@ -36,7 +36,10 @@ a:hover {
 body {
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-image: url("/assets/Website_Background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {
@@ -202,7 +205,7 @@ span {
   }
 }
 
-.topbar {
+.headerbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -216,96 +219,154 @@ span {
   animation: fadeInDelay 3s ease-in-out;
 }
 
-.topbar img {
+.headerbar img {
   height: 40px;
 }
 
-.topbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.topbar ul li {
+.headerbar ul li {
   margin-left: 20px;
-  
+  transition: 0.5s;
 }
 
-.topbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  font-size: 1.2em;
-  font-weight: 500;
-  font-family: inherit;
-}
-
-.topbar ul li a:hover {
-  color: #e403a0;
-  cursor: pointer;
-  transition: 1s;
-  transform: scale(1.2);
-}
-
-img{
+.headerbar img{
 border-radius: 50%;
 transition: 0.5s;
 }
 
-img:hover{
+.headerbar img:hover{
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+
+
+
+.bottombar {
+  position: fixed;
+  align-items: right;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 50px;
+  background-color: transparent;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  animation: fadeInDelay 3s ease-in-out;
+}
+
+.bottombar img {
+  height: 40px;
+}
+
+.bottombar ul {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.bottombar ul li {
+  margin-right: 20px;
+  right: 0;
+  transition: 0.5s;
+}
+
+.bottombar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-family: inherit;
+  transition: 0.5s;
+}
+
+.bottombar ul li a:hover {
+  color: #e403a0;
+  cursor: pointer;
   transform: scale(1.2);
 }
 
-/* ---MOBILE--- */
+.bottombar img{
+border-radius: 50%;
+transition: 0.5s;
+}
 
-@media screen and (max-width: 768px) {
+.bottombar img:hover{
+  transform: scale(1.4);
+  cursor: pointer;
+}
 
-  .topbar {
-    padding: 10px 20px;
-  }
 
-  .topbar img {
-    height: 30px;
-  }
+@media (max-width: 768px) {
 
-  .topbar ul {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: #222;
+  .headerbar {
+    width: 100%;
+    flex-direction: row;
     padding: 20px;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
-  .topbar ul li {
-    margin: 10px 0;
+
+  .bottombar {
+    width: 100%;
+    flex-direction: row;
+    padding: 20px;
   }
 
-  .topbar ul li a {
-    font-size: 14px;
-    font-weight: normal;
+  .bottombar ul {
+    margin-top: 20px;
+    flex-direction: row;
   }
 
-  .topbar.active ul {
-    display: flex;
+  .bottombar ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding: 10px;
   }
+}
+.raindrops-container {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
 
-  .toggle {
-    display: block;
-    position: absolute;
-    top: 25px;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    background-image: url('menu-icon.png');
-    background-size: cover;
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background-color: #fff;
+  animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
   }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(550px);
+    opacity: 0;
+  }
+}
 
+#rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 15%
 }
