@@ -40,6 +40,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #000;
+  overflow: hidden;
+  
 }
 
 h1 {
@@ -293,6 +296,7 @@ transition: 0.5s;
     margin-bottom: 10px;
     padding: 10px;
   }
+  
 }
 
 @keyframes fall {
@@ -319,12 +323,45 @@ transition: 0.5s;
   opacity: 20%
 }
 
-#fog-overlay {
-  position: fixed;
+.fog-overlay::before {
+  content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  opacity: 100%
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='<http://www.w3.org/2000/svg>' viewBox='0 0 200 200'%3E%3Crect width='100%25' height='100%25' fill='black' /%3E%3Cpath d='M0,0 L200,0 L200,200 C200,200 100,250 0,200 Z' fill='white' /%3E%3C/svg%3E");
+  animation: fog 10s linear infinite;
+}
+
+.fog-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='<http://www.w3.org/2000/svg>' viewBox='0 0 200 200'%3E%3Crect width='100%25' height='100%25' fill='black' /%3E%3Cpath d='M0,0 L200,0 L200,200 C200,200 100,250 0,200 Z' fill='white' /%3E%3C/svg%3E");
+  opacity: 0;
+}
+
+@keyframes fog {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.p5Canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
 }
