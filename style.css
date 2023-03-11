@@ -65,26 +65,6 @@ h2 {
   color: #888;
 }
 
-button {
-  border-radius: 8px;
-  border: 3px inset transparent;
-  padding: 0.6em 1.5em;
-  font-size: 1.2em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  z-index:2;
-  margin:40px;
-}
-button:hover {
-  border-color: #e403a0;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -157,14 +137,6 @@ span {
   }
 }
 
-.btn-group {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 2;
-  animation: fadeInDelay 2s ease-in-out;
-}
 
 @keyframes fadeIn {
   from {
