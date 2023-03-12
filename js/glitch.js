@@ -29,7 +29,7 @@ document.getElementById("duwub").onmouseover = event => {
 
 //description
 
-const letters2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
 document.getElementById("description").onmouseover = event => {
@@ -43,9 +43,10 @@ document.getElementById("description").onmouseover = event => {
                     return event.target.dataset.value[index];
                 }
 
-                return letters2[Math.floor(Math.random() * 52)]
-            })
-            .join(""); 
+                const lettersToUse = letter === letter.toUpperCase() ? uppercaseLetters : letters;
+                return lettersToUse[Math.floor(Math.random() * lettersToUse.length)];
+              })
+              .join("");
 
             if (iterations >= event.target.dataset.value.length) {
                 clearInterval(interval);
