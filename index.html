@@ -10,18 +10,26 @@
     <script src="/js/rain.js"></script>
 
   </head>
+
+  <body data-nav="false">
   <body>
+    <div class="headerbar">
+      <div class="logo">
+        <button id="nav-toggle" type="button" onclick="toggleNav()">
+          <img src="/assets/duwub-logo.jpg" title="Menu" alt="Menu">
+        </button>
+        </div>
+    </div>
+
+  </body>
+
+
+  <main>
 
 
     <canvas id="rain" width="800" height="600"></canvas>
 
-    <div class="headerbar">
-      <div class="logo">
-        <a href="/index.html">
-          <img src="/assets/duwub-logo.jpg" title="duwub" alt="Logo">
-        </a>
-        </div>
-    </div>
+    
     <div class="footerbar">
       <ul>
         <li>
@@ -49,9 +57,45 @@
     
     <div>
         <section>
-          <h1>duwub</h1>
-          <h2>Lighting Designer and Programmer</h2>
+          <h1 data-value="duwub" id="duwub">duwub</h1>
+          <h2 data-value="Lighting Designer and Programmer" id="description">Lighting Designer and Programmer</h2>
+          
         </section>
+
+    </div>
+    
+  </main>
+    
+    <nav>
+      <div id="nav-links">
+        <a class="nav-link" href="index.html">
+          <img class="nav-link-image" src="assets/BlindingLights_02.3805682.png" />
+          <h2 class="nav-link-label rubik-font">Home</h2>
+        </a>
+        <a class="nav-link" href="about.html">
+          <img class="nav-link-image" src="https://i.kym-cdn.com/entries/icons/original/000/039/059/images_(39).jpeg" />
+          <h2 class="nav-link-label rubik-font">WYSI</h2>
+        </a>
+        <a class="nav-link" href="about.html">
+          <img class="nav-link-image" src="https://i.kym-cdn.com/entries/icons/original/000/039/059/images_(39).jpeg" />
+          <h2 class="nav-link-label rubik-font">727</h2>
+        </a>
+        <a class="nav-link" href="about.html">
+          <img class="nav-link-image" src="https://i.kym-cdn.com/entries/icons/original/000/039/059/images_(39).jpeg" />
+          <h2 class="nav-link-label rubik-font">WYSI</h2>
+        </a>
+        <a class="nav-link" href="about.html">
+          <img class="nav-link-image" src="https://i.kym-cdn.com/entries/icons/original/000/039/059/images_(39).jpeg" />
+          <h2 class="nav-link-label rubik-font">727</h2>
+        </a>
+      </div>
+    </nav>
+
+    <script src="/js/navMenu.js"></script>
+    <script src="/js/glitch.js"></script>
+
+  </body>
+      
 </html>
 
 
