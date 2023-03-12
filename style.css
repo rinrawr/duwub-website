@@ -387,7 +387,6 @@ nav {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 20%;
-
   overflow-x: auto;
   overscroll-behavior-inline: contain;
   }
@@ -410,12 +409,18 @@ body[data-nav="true"] > #nav-toggle > .close {
   transform: translate(-50%, -50%) scale(1);
 }
 
+#nav-links > .nav-link:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 /* Nav Link Styling */
 
 #nav-links > .nav-link {
   text-decoration: none;
   color: #806ca3;
   font-family: inherit;
+  transition: 0.2s ease-in;
 }
 
 
