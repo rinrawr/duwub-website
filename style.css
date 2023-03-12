@@ -326,12 +326,12 @@ transition: 0.5s;
   }
 
   .footerbar ul {
-    margin-top: 20px;
+    margin: 20px;
     flex-direction: row;
   }
 
   .footerbar ul li {
-    margin-left: 0;
+    margin: auto;
     margin-bottom: 10px;
     padding: 10px;
   }
@@ -387,7 +387,7 @@ nav {
   transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 21%;
+  grid-auto-columns: 20%;
 
   overflow-x: auto;
   overscroll-behavior-inline: contain;
@@ -427,6 +427,7 @@ body[data-nav="true"] > #nav-toggle > .close {
   border-radius: 0.5rem;
   margin-top: 0.75rem;
   object-fit: cover;
+  max-width: 16vw;
 }
 
 
