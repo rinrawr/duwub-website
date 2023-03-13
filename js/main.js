@@ -3,3 +3,5 @@ function copyLink(event, url) {
     navigator.clipboard.writeText(url);
     alert('727 WYSI');
   }
+
+  

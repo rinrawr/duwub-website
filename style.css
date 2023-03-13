@@ -382,7 +382,7 @@ nav {
   transition: transform 500ms cubic-bezier(.13,.53,.38,.97); 
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 20vw;
+  grid-auto-columns: 22vw;
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior-inline: contain;
@@ -419,10 +419,15 @@ body[data-nav="true"] > #nav-toggle > .close {
   font-size: 1rem;
 }
 
+#nav-links h1 {
+  background-color: #000;
+}
+
 
 
 #nav-links > .nav-link > .nav-link-image {
-  filter: brightness(50%);
+  filter: brightness(40%);
+  box-sizing: border-box;
   width: max(15vw, 400px);
   aspect-ratio: 1.8 / 1.2;
   border-radius: 0.5rem;
@@ -430,8 +435,9 @@ body[data-nav="true"] > #nav-toggle > .close {
   object-fit: cover;
   max-width: 18vw;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 15px;
   z-index: 6;
+  
 }
 
 #nav-links > .nav-link > .nav-link-label {
@@ -453,7 +459,8 @@ body[data-nav="true"] > #nav-toggle > .close {
     border-radius: 0.5rem;
     margin-top: 0.75rem;
     object-fit: cover;
-    max-width: 45vw;
+    max-width: 40vw;
+    transform: scaleX(100%);
   }
 
   #nav-links > .nav-link > .nav-link-label {
@@ -473,7 +480,7 @@ body[data-nav="true"] > #nav-toggle > .close {
   #nav-links {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 45vw;
+    grid-auto-columns: 40vw;
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     }
@@ -486,3 +493,27 @@ body[data-nav="true"] > #nav-toggle > .close {
     transform: translateY(40vh);
   }
 }
+
+.scroll-indicator {
+  position: fixed;
+  width: 20vw;
+  height: 2.5vh;
+  border-radius: 20px;
+  background: linear-gradient(90deg, rgba(0,46,255,0.2539216370141807) 0%, rgba(181,0,255,0.25112051656600143) 100%);
+  animation: move 5s infinite ease-in-out;
+  z-index: 50;
+}
+
+@keyframes move {
+  30%, 100% {
+    opacity: 0;
+    transform: translate(100vw, 0);
+  }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+
