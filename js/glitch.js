@@ -3,7 +3,7 @@
 const letters = "uwurawrdb";
 
 
-document.getElementById("duwub").onmouseover = event => {
+document.getElementById("duwub").onmousedown = event => {
     let iterations = 0;
 
     const interval = setInterval(() => {
@@ -32,7 +32,7 @@ document.getElementById("duwub").onmouseover = event => {
 
 const uppercaseLetters = "UWU";
 
-document.getElementById("description").onmouseover = event => {
+document.getElementById("description").onmousedown = event => {
     let iterations = 0;
 
     const interval = setInterval(() => {
