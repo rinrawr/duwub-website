@@ -496,23 +496,23 @@ body[data-nav="true"] > #nav-toggle > .close {
 
 .scroll-indicator {
   position: fixed;
-  width: 20vw;
+  width: 40vw;
   height: 2.5vh;
   border-radius: 20px;
   background: linear-gradient(90deg, rgba(0,46,255,0.2539216370141807) 0%, rgba(181,0,255,0.25112051656600143) 100%);
-  animation: move 5s infinite ease-in-out;
+  animation: move 10s infinite ease-in-out;
   z-index: 50;
 }
 
 @keyframes move {
-  30%, 100% {
+  20%, 100% {
     opacity: 0;
-    transform: translate(100vw, 0);
+    transform: translate(100%, 0);
   }
   0% {
     opacity: 0;
   }
-  20% {
+  10% {
     opacity: 1;
   }
 }
