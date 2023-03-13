@@ -23,7 +23,7 @@ document.getElementById("duwub").onmousedown = event => {
                 clearInterval(interval);
             }
 
-            iterations += 1 / 4;
+            iterations += 1 / 6;
     }, 50);
     
 }
