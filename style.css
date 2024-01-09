@@ -42,6 +42,10 @@ body {
   overflow: hidden;
 }
 
+.no-transition * {
+  transition: none !important;
+}
+
 main {
   width: 100%;
   height: 100vh;
@@ -61,12 +65,12 @@ main {
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: rgb(23, 22, 22);
+  background: rgb(25, 20, 31);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 1s linear;
   pointer-events: none;
 }
 
