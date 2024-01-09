@@ -45,7 +45,7 @@ body {
 main {
   width: 100%;
   height: 100vh;
-  background-image: url("/assets/Website_Background.png");
+  background-image: url("https://cdn.duwub.dev/r/Website_Background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -147,6 +147,63 @@ section h2 {
   color: black;
 }
 
+
+.about h1 {
+  mix-blend-mode: normal;
+  font-size: calc(2rem + 3vw);
+  color: #ffffffa2;
+  padding: 2%;
+}
+
+.about h2 {
+  mix-blend-mode: normal;
+  font-size: calc(1rem + 1.5vw);
+  color: #ffffffa2;
+  padding: 2%;
+
+}
+
+.about {
+  background: linear-gradient(270deg, #368671, #443686, #367586, #9a378c);
+  background-size: 800% 800%;
+
+  -webkit-animation: about 30s ease infinite;
+  -moz-animation: about 30s ease infinite;
+  animation: about 30s ease infinite;
+}
+
+@-webkit-keyframes about {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes about {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes about {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.about-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 5s ease-in-out;
+}
+
+.about img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 20vw;
+  height: 20vw;
+  margin-bottom: 10px;
+  padding: 1%;
+}
 
 span {
   color: #fff;
@@ -502,18 +559,7 @@ body[data-nav="true"] > #nav-toggle > .close {
   background: linear-gradient(90deg, rgba(0,46,255,0.2539216370141807) 0%, rgba(181,0,255,0.25112051656600143) 100%);
   animation: move 10s infinite ease-in-out;
   z-index: 50;
+  opacity: 0;
 }
 
-@keyframes move {
-  20%, 100% {
-    opacity: 0;
-    transform: translate(100%, 0);
-  }
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-}
 
