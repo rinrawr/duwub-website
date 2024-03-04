@@ -467,8 +467,9 @@ nav {
   z-index: 5;
   }
 
-.steve {
-  height: 100%;
+.steve img {
+  max-width: 100%;
+  min-height: 100vh;
 }
 
 body[data-nav="true"] > nav > #nav-links {
