@@ -469,7 +469,7 @@ nav {
 
 .steve img {
   max-width: 100%;
-  min-height: 100vh;
+  height: auto;
 }
 
 body[data-nav="true"] > nav > #nav-links {
