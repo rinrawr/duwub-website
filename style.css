@@ -467,6 +467,9 @@ nav {
   z-index: 5;
   }
 
+.steve {
+  height: 100%;
+}
 
 body[data-nav="true"] > nav > #nav-links {
   transform: translateY(0%) scale(1);
