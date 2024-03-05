@@ -7,6 +7,7 @@
     <meta content="https://cdn.duwub.dev/r/Website_Background.jpg" property="og:image" />
     <meta name="twitter:card" content="https://cdn.duwub.dev/r/Website_Background.jpg">
     <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="assets\css\tailwind.css">
     <script src="https://kit.fontawesome.com/a000e57acd.js" crossorigin="anonymous"></script>
     <title>about</title>
 
@@ -31,27 +32,31 @@
 
 
   <main>
-
     
     <div>
         <section class="about">
 
             <h1>About Me</h1>
 
-            <h2>My name is Dawson Becker and I am a beginner software developer and lighting designer.
+            <h2 class="text-white text-md md:text-2xl mix-blend-exclusion animate-fadeIn z-50 justify-center text-center">My name is Dawson Becker and I am a beginner software developer and lighting designer.
               I am currently pursuing a degree in Computer Science and enhancing my programming and design abilities.
               Besides my academic work, I also work as a Q/A Engineer and Support Agent at Imaginary Labs,
               a company that creates innovative solutions for the live events industry.
             </h2>
 
-            <img class="about-img" src="assets\about.jpg">
+
           
         </section>
-
-
     </div>
-    
+
+    <div class="canvas">
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.55/build/spline-viewer.js"></script>
+      <spline-viewer class="-mt-8" url="https://prod.spline.design/f-fOQr9TdgnK-lof/scene.splinecode"></spline-viewer>
+    </div>
+
+
   </main>
+
     
   <nav id="nav-menu">
 
@@ -80,9 +85,14 @@
 
     <script src="/js/navMenu.js"></script>
     <script src="/js/loader.js"></script>
+    <script>
+      window.addEventListener('touchmove', function(event) {
+        event.preventDefault();
+      }, { passive: false });
+    </script>
 
   </body>
-      
+  
 </html>
 
 
