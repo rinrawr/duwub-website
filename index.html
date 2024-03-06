@@ -23,11 +23,29 @@
       
     </div>
     <div class="headerbar">
-      <div class="logo">
+      <!-- <div class="logo">
         <button id="nav-toggle" type="button" onclick="toggleNav()">
           <img src="assets/pfp.JPG" title="Menu" alt="Menu">
         </button>
-        </div>
+        </div> -->
+
+      <!-- The Glow Button -->
+      <a onclick="toggleNav()" class="GlowingButton" target="_blank">
+      <!-- Glow -->
+      <div class="GlowingButton__glowWrap l"><span class="GlowingButton__glow"></span></div>
+      <div class="GlowingButton__glowWrap r"><span class="GlowingButton__glow"></span></div>
+      <!-- /Glow -->
+      <!-- Overlay -->
+      <span class="GlowingButton__overlay"></span>
+      <!-- Overlay -->
+      <!-- Content -->
+      <div class="GlowingButton__content">
+        <span class="fa-solid fa-bars"></span>
+        <span class="fa-solid fa-angles-down"></span>  
+      </div>
+      <!-- /Content -->
+      </a>
+  <!-- /The Glow Button -->
     </div>
 
   </body>
@@ -113,6 +131,8 @@
     <script src="/js/horScroll.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/loader.js"></script>
+    <script src="/js/menuButton.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 
   </body>
       
