@@ -42,10 +42,6 @@ body {
   overflow: hidden;
 }
 
-.no-transition * {
-  transition: none !important;
-}
-
 main {
   width: 100%;
   height: 100vh;
@@ -70,10 +66,105 @@ main {
   top: 0;
   left: 0;
   z-index: 9999;
-  transition: opacity 1s linear;
+  transition: opacity 1s ease-in-out;
   pointer-events: none;
 }
 
+.loading {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -30px;
+  transform: rotate(45deg) scale(150%);
+}
+.loading div {
+  width: 6px;
+  height: 6px;
+  background: #6f00ff;
+  border-radius: 100%;
+  float: left;
+  margin-bottom: 12px;
+  animation: scaleDot 1s ease infinite;
+}
+.loading div:not(:nth-child(4n+4)) {
+  margin-right: 12px;
+}
+.loading div:nth-child(1) {
+  animation-delay: 0;
+}
+.loading div:nth-child(2),
+.loading div:nth-child(5) {
+  animation-delay: 0.1s;
+}
+.loading div:nth-child(3),
+.loading div:nth-child(6),
+.loading div:nth-child(9) {
+  animation-delay: 0.2s;
+}
+.loading div:nth-child(4),
+.loading div:nth-child(7),
+.loading div:nth-child(10),
+.loading div:nth-child(13) {
+  animation-delay: 0.3s;
+}
+.loading div:nth-child(8),
+.loading div:nth-child(11),
+.loading div:nth-child(14) {
+  animation-delay: 0.4s;
+}
+.loading div:nth-child(12),
+.loading div:nth-child(15) {
+  animation-delay: 0.5s;
+}
+.loading div:nth-child(16) {
+  animation-delay: 0.6s;
+}
+@-moz-keyframes scaleDot {
+  40% {
+    transform: scale(2) translate(-2px, -2px);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleDot {
+  40% {
+    transform: scale(2) translate(-2px, -2px);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes scaleDot {
+  40% {
+    transform: scale(2) translate(-2px, -2px);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDot {
+  40% {
+    transform: scale(2) translate(-2px, -2px);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 h1 {
   font-size: 4em;
@@ -374,7 +465,7 @@ transition: 0.5s;
 }
 
 .MenuButton:hover {
-  transform: scale(3);
+  transform: scale(2.5);
 }
 
 

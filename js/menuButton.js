@@ -22,7 +22,7 @@
                     targets: glowElements,
                     translateX: `${normalizedLocalCursorPos.x}`,
                     translateY: `${normalizedLocalCursorPos.y}`,
-                    scale: 3
+                    scale: 2
                 });
             });
             button.addEventListener("mouseleave", function () {
