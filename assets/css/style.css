@@ -42,10 +42,6 @@ body {
   overflow: hidden;
 }
 
-.no-transition * {
-  transition: none !important;
-}
-
 main {
   width: 100%;
   height: 100vh;
@@ -70,15 +66,104 @@ main {
   top: 0;
   left: 0;
   z-index: 9999;
-  transition: opacity 1s linear;
+  transition: opacity 1s ease-in-out;
   pointer-events: none;
 }
 
-button {
-  border: none;
-  cursor: pointer;
-  appearance: none;
-  background-color: inherit;
+.loading {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -30px;
+  transform: rotate(45deg) scale(150%);
+}
+.loading div {
+  width: 6px;
+  height: 6px;
+  background: #6f00ff;
+  border-radius: 100%;
+  float: left;
+  margin-bottom: 12px;
+  animation: scaleDot 1s ease infinite;
+}
+.loading div:not(:nth-child(4n+4)) {
+  margin-right: 12px;
+}
+.loading div:nth-child(1) {
+  animation-delay: 0;
+}
+.loading div:nth-child(2),
+.loading div:nth-child(5) {
+  animation-delay: 0.1s;
+}
+.loading div:nth-child(3),
+.loading div:nth-child(6),
+.loading div:nth-child(9) {
+  animation-delay: 0.2s;
+}
+.loading div:nth-child(4),
+.loading div:nth-child(7),
+.loading div:nth-child(10),
+.loading div:nth-child(13) {
+  animation-delay: 0.3s;
+}
+.loading div:nth-child(8),
+.loading div:nth-child(11),
+.loading div:nth-child(14) {
+  animation-delay: 0.4s;
+}
+.loading div:nth-child(12),
+.loading div:nth-child(15) {
+  animation-delay: 0.5s;
+}
+.loading div:nth-child(16) {
+  animation-delay: 0.6s;
+}
+@-moz-keyframes scaleDot {
+  40% {
+    transform: scale(2) translate(-2px, -2px);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes scaleDot {
+  40% {
+    transform: scale(2) translate(-2px, -2px);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes scaleDot {
+  40% {
+    transform: scale(2) translate(-2px, -2px);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes scaleDot {
+  40% {
+    transform: scale(2) translate(-2px, -2px);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 h1 {
@@ -204,21 +289,6 @@ section h2 {
 
 
 
-span {
-  color: #fff;
-  user-select: none;
-}
-
-
-#vantajs {
-  position:absolute;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px;
-  z-index:1;
-}
-
 @keyframes click {
   0%,
   50%,
@@ -295,6 +365,107 @@ transition: 0.5s;
   transform: scale(1.4);
   cursor: pointer;
   filter: drop-shadow(0 0 2em #ff64f7be);
+}
+
+/* Glowing Button */
+.MenuButton {
+  position: relative;
+  display: inline-flex;
+  height: 40px;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+  text-decoration:none;
+  transition: 0.6s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.MenuButton__overlay {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 14px;
+  opacity: 0%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.MenuButton__glowWrap {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 65.93%;
+  height: 86.36%;
+}
+
+.MenuButton__glowWrap.l {
+  left: -4px;
+}
+
+.MenuButton__glowWrap.r {
+  right: -4px;
+}
+
+.MenuButton__glow {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  border-radius: 14px;
+  filter: blur(15px);
+  display: block;
+  will-change: transform, filter, opacity;
+  transition: 0.6s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.MenuButton__glowWrap.l .MenuButton__glow {
+  background: rgb(213, 159, 255);
+}
+
+.MenuButton__glowWrap.r .MenuButton__glow {
+  background: rgb(117, 215, 245);
+}
+
+.MenuButton__content {
+  overflow: hidden;
+  color: #ffffff;
+  position: relative;
+  mix-blend-mode: overlay;
+  height: fit-content;
+  z-index: 3;
+}
+
+.MenuButton__content span {
+  display: block;
+  transition: 0.5s transform cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.MenuButton__content span:nth-child(2) {
+  position: absolute;
+}
+
+/* Hover State */
+.MenuButton:hover .MenuButton__content span:nth-child(1) {
+  transform: translateY(-800%);
+}
+
+.MenuButton:hover .MenuButton__content span:nth-child(2) {
+  transform: translateY(-100%);
+}
+
+.MenuButton:hover .MenuButton__glow {
+  filter: blur(20px);
+  opacity: 1;
+}
+
+.MenuButton:hover .MenuButton__overlay {
+  opacity: 0%;
+}
+
+.MenuButton:hover {
+  transform: scale(2.5);
 }
 
 

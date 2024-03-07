@@ -12,12 +12,10 @@ window.addEventListener('load', () => {
         preloader.style.opacity = 1;
       }
       if (preloader.style.opacity > 0) {
-        preloader.style.opacity -= 0.1;
+        preloader.style.opacity = 0;
       } else {
         clearInterval(fadeEffect);
-        // Remove the no-transition class from the main
-        main.classList.remove('no-transition');
       }
-    }, 200);
-  }, 1000); // Delay of 1 second
+    }, );
+  }, 100); // Delay of 1 second
 });
