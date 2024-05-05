@@ -1,0 +1,11 @@
+Your selected colors:
+
+    Text: #dae4fa - rgb(218, 228, 250) - hsl(221, 76%, 92%)
+    Background: #040b1b - rgb(4, 11, 27) - hsl(222, 74%, 6%)
+    Primary: #0dffce - rgb(13, 255, 206) - hsl(168, 100%, 53%)
+    Secondary: #75159b - rgb(117, 21, 155) - hsl(283, 76%, 35%)
+    Accent: #e22fd8 - rgb(226, 47, 216) - hsl(303, 76%, 54%)
+
+Realtime Colors link for selected colors: https://www.realtimecolors.com/?colors=dae4fa-040b1b-0dffce-75159b-e22fd8&fonts=Satoshi%20Variable-Satoshi%20Variable
+
+Thanks for using RealtimeColors.com!
