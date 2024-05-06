@@ -11,7 +11,7 @@ import { Footer } from './Footer'
 import { motion } from "framer-motion"
 import React from 'react'
 
-const subHeaderWords = `Alberta-based developer and designer with a passion for learning new skills.`;
+const subHeaderWords = `from Alberta, Canada`;
 const typeWriterWords = [
   {
     text: "Junior",
@@ -77,7 +77,7 @@ const Main = () => {
           <motion.div variants={item} className="absolute"></motion.div>
           <motion.div variants={item} className="absolute"></motion.div>
           <motion.div variants={item} className="absolute"></motion.div>
-          <motion.div variants={item} className="py-4 text-base font-extralight md:text-4xl sm:text-7xl dark:text-text-50">
+          <motion.div variants={item} className="flex justify-center py-1 text-center font-extralight dark:text-text-50">
             <TextGenerateEffect words={subHeaderWords} />
           </motion.div>
           <motion.div variants={footerItem}>
