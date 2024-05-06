@@ -3,8 +3,7 @@ import React from 'react'
 const Main = () => {
   return (
     <div id='main'>
-        <img className='relative z-10 object-cover object-center w-full h-screen opacity-50 blur-sm' src="https://cdn.duwub.dev/assets/jellyfish.jpg" alt="background" />
-        <div className='absolute top-0 left-0 z-0 w-full h-screen bg-background'></div>
+      <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Back End Developer</h2>
     </div>
   )
 }
