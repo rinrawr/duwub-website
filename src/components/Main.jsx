@@ -68,7 +68,7 @@ const Main = () => {
           className="relative flex flex-col items-center justify-center gap-4 px-4"
         >
           <motion.div variants={item} className="text-3xl font-bold text-center md:text-7xl dark:text-white">
-            <h1 className="text-6xl sm:text-9xl text-text-950 dark:text-text-50 drop-shadow-2xlmix-blend-overlay">duwub</h1>
+            <h1 className="text-8xl sm:text-9xl text-text-950 dark:text-text-50 drop-shadow-2xlmix-blend-overlay">duwub</h1>
           </motion.div>
           <motion.div variants={item} className="py-4 text-base font-extralight md:text-4xl sm:text-7xl dark:text-text-50">
             <TypewriterEffect words={typeWriterWords} />
