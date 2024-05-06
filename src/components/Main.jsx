@@ -4,12 +4,14 @@
 import { AuroraBackground } from "./ui/aurora-background"
 import { HeroHighlight } from "./ui/hero-highlight"
 import { TypewriterEffect } from "./ui/typewriter-effect";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 {/* Essential Imports */}
+import { Footer } from './Footer'
 import { motion } from "framer-motion"
 import React from 'react'
 
-const subHeaderWords = `Junior Software Developer and Lighting Designer from Alberta, Canada.`;
+const subHeaderWords = `Alberta-based developer and designer with a passion for learning new skills.`;
 const typeWriterWords = [
   {
     text: "Junior",
@@ -50,6 +52,11 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 1.2, type: "tween", ease: "easeInOut"}}
 };
 
+const footerItem = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 1.2, type: "tween", ease: "easeInOut"}}
+};
+
 const Main = () => {
   return (
     <AuroraBackground showRadialGradient={true}>
@@ -66,6 +73,17 @@ const Main = () => {
           <motion.div variants={item} className="py-4 text-base font-extralight md:text-4xl sm:text-7xl dark:text-text-50">
             <TypewriterEffect words={typeWriterWords} />
           </motion.div>
+          <motion.div variants={item} className="absolute"></motion.div>
+          <motion.div variants={item} className="absolute"></motion.div>
+          <motion.div variants={item} className="absolute"></motion.div>
+          <motion.div variants={item} className="absolute"></motion.div>
+          <motion.div variants={item} className="py-4 text-base font-extralight md:text-4xl sm:text-7xl dark:text-text-50">
+            <TextGenerateEffect words={subHeaderWords} />
+          </motion.div>
+          <motion.div variants={footerItem}>
+            <Footer />
+          </motion.div>
+          
           {/* <motion.button variants={item} className="px-4 py-2 text-white bg-black rounded-full dark:bg-white w-fit dark:text-black">
             Debug now
           </motion.button> */}
