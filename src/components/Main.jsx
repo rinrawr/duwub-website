@@ -1,11 +1,78 @@
+"use client";
+
+{/* UI Component Imports */}
+import { AuroraBackground } from "./ui/aurora-background"
+import { HeroHighlight } from "./ui/hero-highlight"
+import { TypewriterEffect } from "./ui/typewriter-effect";
+
+{/* Essential Imports */}
+import { motion } from "framer-motion"
 import React from 'react'
+
+const subHeaderWords = `Junior Software Developer and Lighting Designer from Alberta, Canada.`;
+const typeWriterWords = [
+  {
+    text: "Junior",
+  },
+  {
+    text: "Software",
+    className: "text-secondary-800 dark:text-secondary-400",
+  },
+  {
+    text: "Developer",
+    className: "text-secondary-800 dark:text-secondary-400",
+  },
+  {
+    text: "and",
+  },
+  {
+    text: "Lighting",
+    className: "text-accent-800 dark:text-accent-400",
+  },
+  {
+    text: "Designer.",
+    className: "text-accent-800 dark:text-accent-400",
+  },
+];
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren:1
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: -30 },
+  show: { opacity: 1, y: 0, transition: { duration: 1.2, type: "tween", ease: "easeInOut"}}
+};
 
 const Main = () => {
   return (
-    <div id='main'>
-      <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Back End Developer</h2>
-    </div>
+    <AuroraBackground showRadialGradient={true}>
+      <HeroHighlight>
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="relative flex flex-col items-center justify-center gap-4 px-4"
+        >
+          <motion.div variants={item} className="text-3xl font-bold text-center md:text-7xl dark:text-white">
+            <h1 className="text-6xl sm:text-9xl text-text-950 dark:text-text-50 drop-shadow-2xlmix-blend-overlay">duwub</h1>
+          </motion.div>
+          <motion.div variants={item} className="py-4 text-base font-extralight md:text-4xl sm:text-7xl dark:text-text-50">
+            <TypewriterEffect words={typeWriterWords} />
+          </motion.div>
+          {/* <motion.button variants={item} className="px-4 py-2 text-white bg-black rounded-full dark:bg-white w-fit dark:text-black">
+            Debug now
+          </motion.button> */}
+        </motion.div>
+      </HeroHighlight>
+    </AuroraBackground>
   )
 }
 
-export default Main
+export default Main;

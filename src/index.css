@@ -1,4 +1,19 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+   
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::selection {
+    background-color: #66ffe024;
+  }
