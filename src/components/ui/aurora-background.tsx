@@ -22,8 +22,8 @@ export const AuroraBackground = ({
         )}
         {...props}
       >
-        <div className="absolute inset-0 overflow-hidden backdrop-blur-2xl backdrop-brightness-25 dark:backdrop-brightness-0">
-          <div
+        <div className="absolute inset-0 overflow-hidden backdrop-blur-2xl backdrop-brightness-25 dark:backdrop-brightness-50">
+          {/* <div
             //   I'm sorry but this is what peak developer performance looks like // trigger warning
             className={cn(
               `
@@ -45,7 +45,7 @@ export const AuroraBackground = ({
               showRadialGradient &&
                 `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`
             )}
-          ></div>
+          ></div> */}
         </div>
         {children}
       </div>

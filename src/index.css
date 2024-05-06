@@ -17,3 +17,7 @@
   ::selection {
     background-color: #66ffe024;
   }
+
+  body, html {
+    background-color: #030916;
+  }
