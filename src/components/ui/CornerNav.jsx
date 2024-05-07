@@ -199,7 +199,7 @@ const LINKS = [
   },
   {
     title: "about",
-    href: "#",
+    href: "#about",
   },
   {
     title: "blog",

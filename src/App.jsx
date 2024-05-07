@@ -1,9 +1,10 @@
-import Main from './components/Hero'
+import Hero from './components/Hero'
 import { StickyCards } from './components/StickyCards'
 
 import { Nav } from './components/ui/CornerNav'
-import { RevealBento } from './components/Bento'
+import { About } from './components/About'
 import { Footer } from './components/Footer'
+import { Reveal } from './utility/Reveal'
 
 
 function App() {
@@ -11,9 +12,19 @@ function App() {
   return (
     <div>
       <Nav />
-      <Main /> 
-      <RevealBento  id="about"/>
-      <Footer />
+      <Reveal>
+        <Hero /> 
+      </Reveal>
+
+      <About  id="about"/>
+
+      <Reveal>
+        <Footer />
+      </Reveal>
+
+      {/* <Reveal>
+        <StickyCards />
+      </Reveal> */}
     </div>
   )
 }
