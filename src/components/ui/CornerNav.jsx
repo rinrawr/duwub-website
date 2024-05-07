@@ -2,17 +2,7 @@ import { SiInstagram, SiLinkedin, SiTwitter, SiYoutube } from "react-icons/si";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowRight, FiArrowUpRight } from "react-icons/fi";
-
-export const Example = () => {
-  return (
-    <div className="h-screen bg-neutral-100">
-      <Nav />
-      <span className="absolute flex items-center gap-2 text-lg -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2 text-violet-500">
-        <span>Open me</span> <FiArrowUpRight />
-      </span>
-    </div>
-  );
-};
+import { Link } from 'react-scroll'
 
 export const Nav = () => {
   const [active, setActive] = useState(false);
@@ -35,13 +25,13 @@ const LinksOverlay = () => {
   );
 };
 
-const LinksContainer = () => {
+const LinksContainer = ({ setActive }) => {
   return (
     <motion.div className="p-12 pl-4 space-y-4 md:pl-20">
       {LINKS.map((l, idx) => {
         return (
-          <NavLink key={l.title} href={l.href} idx={idx}>
-            {l.title}
+          <NavLink key={l.title} href={l.href} idx={idx} onClick={() => setActive((pv) => !pv)}>
+            <Link to={l.href} spy={true} smooth={true} offset={50} duration={500}>{l.title}</Link>
           </NavLink>
         );
       })}
@@ -195,11 +185,11 @@ const FooterCTAs = () => {
 const LINKS = [
   {
     title: "home",
-    href: "#",
+    href: "home",
   },
   {
     title: "about",
-    href: "#about",
+    href: "about",
   },
   {
     title: "blog",
