@@ -71,9 +71,9 @@ const Hero = () => {
             <TextGenerateEffect words={subHeaderWords} />
           </motion.div>
           <motion.div variants={item} className="absolute"></motion.div>
-          <motion.button variants={item} className="px-4 py-2 text-white bg-black rounded-full dark:bg-white w-fit dark:text-black">
+          {/* <motion.button variants={item} className="px-4 py-2 text-white bg-black rounded-full dark:bg-white w-fit dark:text-black">
             Scroll down
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </HeroHighlight>
     </AuroraBackground>
