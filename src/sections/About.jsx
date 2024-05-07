@@ -3,7 +3,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import { SiLinkedin, SiLastdotfm, SiTwitter, SiYoutube } from "react-icons/si";
-import { Footer } from './Footer';
+import { Footer } from '../components/Footer';
 
 export const About = () => {
 
@@ -19,7 +19,7 @@ export const About = () => {
   }, [isInView]);
 
   return (
-    <div ref={ref} id='about' className="bottom-0 px-4 py-12 min-80-screen top-2 bg-zinc-900 text-zinc-50">
+    <div ref={ref} id='about' className="bottom-0 h-full px-4 py-52 top-2 bg-secondary-300 dark:bg-secondary-900 text-zinc-50">
       <motion.div
       variants={{
         hidden: {
