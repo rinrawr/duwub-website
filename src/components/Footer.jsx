@@ -13,7 +13,7 @@ export const Footer = () => {
         </a> - 2024
       </p> Built using {''}
             <a href="https://vitejs.dev/" target='_blank'
-                class="text-purple-600 hover:underline pointer-events-auto">vite.js</a> and {' '}
+                className="text-purple-600 pointer-events-auto hover:underline">vite.js</a> and {' '}
                 <a
                 href="https://tailwindcss.com" target='_blank' class="text-purple-600 hover:underline pointer-events-auto">Tailwind
                 CSS

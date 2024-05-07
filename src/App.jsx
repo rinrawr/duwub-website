@@ -1,16 +1,30 @@
-import Main from './components/Main'
+import Hero from './components/Hero'
 import { StickyCards } from './components/StickyCards'
-import { RevealBento } from './components/Bento'
+
+import { Nav } from './components/ui/CornerNav'
+import { About } from './components/About'
 import { Footer } from './components/Footer'
+import { Reveal } from './utility/Reveal'
 
 
 function App() {
 
   return (
     <div>
-      <Main /> 
-      <RevealBento/>
-      <Footer />
+      {/* <Nav /> */}
+      <Reveal>
+        <Hero /> 
+      </Reveal>
+
+      <About  id="about"/>
+
+      <Reveal>
+        <Footer />
+      </Reveal>
+
+      {/* <Reveal>
+        <StickyCards />
+      </Reveal> */}
     </div>
   )
 }

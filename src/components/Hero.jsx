@@ -51,7 +51,7 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 1.2, type: "tween", ease: "easeInOut"}}
 };
 
-const Main = () => {
+const Hero = () => {
   return (
     <AuroraBackground>
       <HeroHighlight>
@@ -67,16 +67,12 @@ const Main = () => {
           <motion.div variants={item} className="py-4 text-base font-extralight md:text-4xl sm:text-7xl dark:text-text-50">
             <TypewriterEffect words={typeWriterWords} />
           </motion.div>
-          <motion.div variants={item} className="absolute"></motion.div>
-          <motion.div variants={item} className="absolute"></motion.div>
-          <motion.div variants={item} className="absolute"></motion.div>
-          <motion.div variants={item} className="absolute"></motion.div>
           <motion.div variants={item} className="flex justify-center py-1 text-center font-extralight dark:text-text-50">
             <TextGenerateEffect words={subHeaderWords} />
           </motion.div>
-          
+          <motion.div variants={item} className="absolute"></motion.div>
           {/* <motion.button variants={item} className="px-4 py-2 text-white bg-black rounded-full dark:bg-white w-fit dark:text-black">
-            Debug now
+            Scroll down
           </motion.button> */}
         </motion.div>
       </HeroHighlight>
@@ -86,4 +82,4 @@ const Main = () => {
   )
 }
 
-export default Main;
+export default Hero;

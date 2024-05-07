@@ -26,7 +26,7 @@ export const TypewriterEffect = ({
     });
    
     const [scope, animate] = useAnimate();
-    const isInView = useInView(scope);
+    const isInView = useInView(scope, { once: true });
     useEffect(() => {
       if (isInView) {
         animate(
@@ -38,7 +38,7 @@ export const TypewriterEffect = ({
           },
           {
             duration: 0.1,
-            delay: stagger(0.1, {startDelay: 2}),
+            delay: stagger(0.1),
             ease: "easeInOut",
           }
         );
