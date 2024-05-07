@@ -1,10 +1,11 @@
 "use client";
 
 {/* UI Component Imports */}
-import { AuroraBackground } from "./ui/aurora-background"
-import { HeroHighlight } from "./ui/hero-highlight"
-import { TypewriterEffect } from "./ui/typewriter-effect";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
+import { AuroraBackground } from "../components/ui/aurora-background"
+import { HeroHighlight } from "../components/ui/hero-highlight"
+import { TypewriterEffect } from "../components/ui/typewriter-effect";
+import { TextGenerateEffect } from "../components/ui/text-generate-effect";
+import { WavyBackground } from "../components/ui/wavyBackground";
 
 {/* Essential Imports */}
 import { motion } from "framer-motion"
@@ -53,7 +54,7 @@ const item = {
 
 const Hero = () => {
   return (
-    <div id='home' className="min-h-full overflow-auto">
+    <div id='home' className="z-0 object-cover w-full overflow-none">
       <AuroraBackground>
         <HeroHighlight>
           <motion.div

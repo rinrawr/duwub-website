@@ -1,11 +1,12 @@
 import react, { useEffect } from 'react'
 
-import Hero from './components/Hero'
+import Hero from './sections/Hero'
+import { Projects }   from './sections/Projects'
 import { StickyCards } from './components/StickyCards'
 
 // import { Nav } from './components/ui/CornerNav'
 import { GlassNavigation } from './components/ui/GlassNavigation'
-import { About } from './components/About'
+import { About } from './sections/About'
 import { Footer } from './components/Footer'
 import { Reveal } from './utility/Reveal'
 
@@ -25,10 +26,14 @@ function App() {
 
       <GlassNavigation />
       <Reveal>
-        <Hero id="home"/> 
+        <Hero/> 
       </Reveal>
 
       <About/>
+
+      <Reveal>
+        <Projects />
+      </Reveal>
 
       <Reveal>
         <Footer />
@@ -38,6 +43,7 @@ function App() {
         <StickyCards />
       </Reveal> */}
     </div>
+
   )
 }
 

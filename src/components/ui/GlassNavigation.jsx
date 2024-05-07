@@ -1,7 +1,7 @@
 import { FiMenu, FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
 import { useAnimate, motion } from "framer-motion";
-import { Link } from 'react-scroll'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 export const GlassNavigation = () => {
@@ -46,7 +46,7 @@ export const GlassNavigation = () => {
       animate={{ opacity: 1, scale: 1, y: 0 }} // animate to
       transition={{ duration: 0.8, delay: 1, ease: "circInOut" }} // transition settings
     >
-      <div className="flex items-center justify-between px-5 py-5 glass-nav">
+      <div className="z-50 flex items-center justify-between px-5 py-5 glass-nav">
         {/* <Cursor hovered={hovered} scope={scope} /> */}
 
         <Links />
@@ -56,7 +56,7 @@ export const GlassNavigation = () => {
         <Buttons setMenuOpen={setMenuOpen} />
       </div>
 
-      <MobileMenu menuOpen={menuOpen} />
+      <MobileMenu menuOpen={menuOpen} className='z-50'/>
     </motion.nav>
   );
 };
@@ -90,6 +90,7 @@ const Links = () => (
   <div className="items-center hidden gap-2 md:flex">
     <TopLink text="Home" />
     <GlassLink text="About" />
+    <GlassLink text="Projects" />
     {/* <GlassLink text="Contact" /> */}
   </div>
 );
@@ -100,7 +101,7 @@ const GlassLink = ({ text }) => {
     <Link
       href="#"
       className="relative px-4 py-2 overflow-hidden transition-transform scale-100 rounded-lg group hover:scale-105 active:scale-95"
-      to={textLowercase} spy={true} smooth={true} offset={50} duration={500}
+      to={textLowercase} spy={true} smooth={true} offset={0} duration={1000}
     >
       <span className="relative z-10 transition-colors text-white/90 group-hover:text-white">
         {text}
@@ -133,7 +134,7 @@ const TopLink = ({ text }) => {
     );
 };
 
-const Buttons = ({ setMenuOpen }) => (
+const Buttons = ({ menuOpen, setMenuOpen }) => (
   <div className="flex items-center gap-4">
     {/* <div className="hidden md:block">
       <SignInButton />
@@ -144,8 +145,8 @@ const Buttons = ({ setMenuOpen }) => (
     </button> */}
 
     <button
-      onClick={() => setMenuOpen((pv) => !pv)}
-      className="block ml-2 text-3xl transition-all scale-100 text-white/90 hover:scale-105 hover:text-white active:scale-95 md:hidden"
+      onClick={() => setMenuOpen((prev) => !prev)}
+      className="block ml-2 text-3xl transition-all scale-100 text-white/60 hover:scale-105 hover:text-white active:scale-95 md:hidden"
     >
       <FiMenu />
     </button>
@@ -172,13 +173,16 @@ const MobileMenu = ({ menuOpen }) => {
       }}
       className="block overflow-hidden md:hidden"
     >
-      <div className="flex items-center justify-between px-4 pb-4">
-        <div className="flex items-center gap-4">
-          <TopLink text="Home" />
-          <GlassLink text="About" />
-          {/* <TextLink text="Contact" /> */}
+      <div className={(menuOpen ? "hidden" : "") + " menu"}>
+        <div className="flex items-center justify-between px-4 pb-4">
+          <div className="flex items-center gap-4">
+            <TopLink text="Home" />
+            <GlassLink text="About" />
+            <GlassLink text="Projects" />
+            {/* <TextLink text="Contact" /> */}
+          </div>
+          {/* <SignInButton /> */}
         </div>
-        {/* <SignInButton /> */}
       </div>
     </motion.div>
   );
