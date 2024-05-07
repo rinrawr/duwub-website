@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className='overflow-scroll '>
+    <div>
       {/* <Nav /> */}
 
       <GlassNavigation />
