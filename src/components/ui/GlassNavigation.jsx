@@ -41,7 +41,7 @@ export const GlassNavigation = () => {
     //   style={{
     //     cursor: hovered ? "none" : "auto",
     //   }}
-      className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-white/10 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl"
+      className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-white/10 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur dark:background-brightness-100 backdrop-brightness-75 md:left-6 md:right-6 md:top-6 md:rounded-2xl"
       initial={{ opacity: 0, scale: 0.95, y: -120 }} // initial state
       animate={{ opacity: 1, scale: 1, y: 0 }} // animate to
       transition={{ duration: 0.8, delay: 1, ease: "circInOut" }} // transition settings
@@ -103,7 +103,7 @@ const GlassLink = ({ text }) => {
       className="relative px-4 py-2 overflow-hidden transition-transform scale-100 rounded-lg group hover:scale-105 active:scale-95"
       to={textLowercase} spy={true} smooth={true} offset={0} duration={1000}
     >
-      <span className="relative z-10 transition-colors text-white/90 group-hover:text-white">
+      <span className="relative z-10 transition-colors text-white/90 group-hover:text-black dark:group-hover:text-white">
         {text}
       </span>
       <span className="absolute inset-0 z-0 transition-opacity opacity-0 bg-gradient-to-br from-white/20 to-white/5 group-hover:opacity-100" />
@@ -126,7 +126,7 @@ const TopLink = ({ text }) => {
             className="relative px-4 py-2 overflow-hidden transition-transform scale-100 rounded-lg group hover:scale-105 active:scale-95"
             onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}
         >
-            <span className="relative z-10 transition-colors text-white/90 group-hover:text-white">
+            <span className="relative z-10 transition-colors text-white/90 group-hover:text-black dark:group-hover:text-white">
                 {text}
             </span>
             <span className="absolute inset-0 z-0 transition-opacity opacity-0 bg-gradient-to-br from-white/20 to-white/5 group-hover:opacity-100" />

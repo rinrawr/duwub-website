@@ -18,22 +18,22 @@ const typeWriterWords = [
   },
   {
     text: "Software",
-    className: "text-secondary-800 dark:text-secondary-400",
+    className: "text-secondary-300 dark:text-secondary-400",
   },
   {
     text: "Developer",
-    className: "text-secondary-800 dark:text-secondary-400",
+    className: "text-secondary-300 dark:text-secondary-400",
   },
   {
     text: "and",
   },
   {
     text: "Lighting",
-    className: "text-accent-800 dark:text-accent-400",
+    className: "text-accent-400 dark:text-accent-400",
   },
   {
     text: "Designer.",
-    className: "text-accent-800 dark:text-accent-400",
+    className: "text-accent-400 dark:text-accent-400",
   },
 ];
 
@@ -63,8 +63,8 @@ const Hero = () => {
             animate="show"
             className="relative flex flex-col items-center justify-center gap-4 px-4"
           >
-            <motion.div variants={item} className="text-3xl font-bold text-center md:text-7xl dark:text-white">
-              <h1 className="text-8xl sm:text-9xl text-text-950 dark:text-text-50 drop-shadow-2xlmix-blend-overlay">duwub</h1>
+            <motion.div variants={item} className="text-3xl font-bold text-center md:text-7xl">
+              <h1 className="text-8xl sm:text-9xl text-text-50 dark:text-text-50 drop-shadow-2xlmix-blend-overlay">duwub</h1>
             </motion.div>
             <motion.div variants={item} className="py-4 text-base font-extralight md:text-4xl sm:text-7xl dark:text-text-50">
               <TypewriterEffect words={typeWriterWords} />

@@ -19,7 +19,7 @@ export const About = () => {
   }, [isInView]);
 
   return (
-    <div ref={ref} id='about' className="bottom-0 h-full px-4 py-52 top-2 bg-secondary-300 dark:bg-secondary-900 text-zinc-50">
+    <div ref={ref} id='about' className="bottom-0 h-full px-4 py-52 top-2 bg-secondary-100 dark:bg-secondary-900 text-zinc-50">
       <motion.div
       variants={{
         hidden: {
