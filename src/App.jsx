@@ -7,7 +7,7 @@ import { Projects }   from './sections/Projects'
 import { GlassNavigation } from './components/ui/GlassNavigation'
 import { About } from './sections/About'
 import { Footer } from './components/Footer'
-import { Reveal } from './utility/Reveal'
+import { Reveal } from './utils/Reveal'
 
 
 function App() {

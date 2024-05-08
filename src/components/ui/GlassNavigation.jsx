@@ -2,37 +2,21 @@ import { FiMenu, FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
 import { useAnimate, AnimatePresence, motion } from "framer-motion";
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { DarkModeToggle } from "../ui/toggles/DarkModeToggle";
 
 
 export const GlassNavigation = () => {
   const [hovered, setHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mode, setMode] = useState('dark');
 
   const [scope, animate] = useAnimate();
   const navRef = useRef(null);
 
-  const handleMouseMove = ({ offsetX, offsetY, target }) => {
-    // @ts-ignore
-    const isNavElement = [...target.classList].includes("glass-nav");
-
-    if (isNavElement) {
-      setHovered(true);
-
-      const top = offsetY + "px";
-      const left = offsetX + "px";
-
-      animate(scope.current, { top, left }, { duration: 0 });
-    } else {
-      setHovered(false);
-    }
-  };
-
   useEffect(() => {
-    navRef.current?.addEventListener("mousemove", handleMouseMove);
-
-    return () =>
-      navRef.current?.removeEventListener("mousemove", handleMouseMove);
+    document.body.classList.add("dark");
   }, []);
+
 
   return (
     <motion.nav
@@ -54,6 +38,8 @@ export const GlassNavigation = () => {
         {/* <Logo /> */}
 
         <Buttons setMenuOpen={setMenuOpen} />
+        <DarkModeToggle mode={mode} setMode={setMode} />
+
       </div>
 
       <MobileMenu menuOpen={menuOpen} className='z-50'/>

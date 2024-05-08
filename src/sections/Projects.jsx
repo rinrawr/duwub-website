@@ -16,17 +16,16 @@ export function Projects() {
 const SkeletonOne = () => {
   return (
     <div>
-          <div className='aspect-video flex items-center justify-center h-full py-2' >
+          <div className='aspect-video flex items-center justify-center h-full py-1' >
               <iframe
-                  className='top-0 sm:w-1/2 sm:h-1/2 aspect-video md:w-full md:h-full self-center items-center justify-center rounded-lg '
+                  className='top-0 sm:w-3/5 sm:h-3/5 aspect-video md:w-full md:h-full w-full h-full self-center items-center justify-center rounded-lg '
                   src="https://www.youtube.com/embed/Inb-tN56uiA?si=hcjzAoLPRcwyXik3"
                   width="100%"
                   title="YouTube video player"
-                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen">
               </iframe>
           </div>
-      <p className="text-4xl font-bold text-text-50">Made with Carbon 2023 Submission</p>
+      <p className="text-2xl font-bold text-text-50">Made with Carbon 2023 Submission</p>
       <p className="text-base font-light text-text-200">Song: Blinding Lights - The Weeknd</p>
       <p className="max-w-lg my-4 text-base font-normal text-text-100">
         A re-imagining of my original 2021 entry which was one of the winning submissions. A creative project that utilized the Carbon for Unreal

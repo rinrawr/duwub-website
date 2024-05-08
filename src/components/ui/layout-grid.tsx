@@ -13,6 +13,7 @@ type Card = {
 export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   const [selected, setSelected] = useState<Card | null>(null);
   const [lastSelected, setLastSelected] = useState<Card | null>(null);
+  const cardRef = useRef(null);
 
   const handleClick = (card: Card) => {
     setLastSelected(selected);
@@ -20,14 +21,21 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   };
 
   const handleOutsideClick = () => {
-    setLastSelected(selected);
-    setSelected(null);
+      setLastSelected(selected);
+      setSelected(null);
   };
+
+  // useEffect(() => {
+  //   document.addEventListener('mousedown', handleOutsideClick);
+  //   return () => {
+  //     document.removeEventListener('mousedown', handleOutsideClick);
+  //   };
+  // }, [selected, lastSelected]);
 
   return (
     <div className="relative grid w-full h-full grid-cols-1 gap-4 p-10 mx-auto md:grid-cols-3 max-w-7xl">
       {cards.map((card, i) => (
-        <div key={i} className={cn(card.className, "")}>
+        <div key={i} className={cn(card.className, "")} ref={cardRef}>
           <motion.div
             onClick={() => handleClick(card)}
             className={cn(
