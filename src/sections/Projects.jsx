@@ -5,7 +5,7 @@ import { LayoutGrid } from "../components/ui/layout-grid";
 export function Projects() {
   return (
     <div id='projects' className="w-full h-screen py-20 dark:bg-background-950 bg-primary-50">
-        <h1 className="relative z-0 pb-5 text-6xl font-bold text-center text-transparent md:text-7xl bg-clip-text bg-black dark:bg-gradient-to-b dark:from-neutral-200 dark:to-neutral-600">
+        <h1 className="relative z-0 pb-5 text-6xl font-bold text-center text-transparent md:text-7xl bg-clip-text bg-text-800 dark:bg-gradient-to-b dark:from-neutral-200 dark:to-neutral-600">
           Projects
         </h1>
       <LayoutGrid cards={cards}/>

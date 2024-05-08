@@ -5,6 +5,7 @@ import { AuroraBackground } from "../components/ui/aurora-background"
 import { HeroHighlight } from "../components/ui/hero-highlight"
 import { TypewriterEffect } from "../components/ui/typewriter-effect";
 import { TextGenerateEffect } from "../components/ui/text-generate-effect";
+import { BubbleText } from "../components/ui/BubbleText";
 import { WavyBackground } from "../components/ui/wavyBackground";
 
 {/* Essential Imports */}
@@ -64,7 +65,8 @@ const Hero = () => {
             className="relative flex flex-col items-center justify-center gap-4 px-4"
           >
             <motion.div variants={item} className="text-3xl font-bold text-center md:text-7xl">
-              <h1 className="text-8xl sm:text-9xl text-text-50 dark:text-text-50 drop-shadow-2xlmix-blend-overlay">duwub</h1>
+              {/* <h1 className="text-8xl sm:text-9xl text-text-50 dark:text-text-50 drop-shadow-2xlmix-blend-overlay">duwub</h1> */}
+              <BubbleText />
             </motion.div>
             <motion.div variants={item} className="py-4 text-base font-extralight md:text-4xl sm:text-7xl dark:text-text-50">
               <TypewriterEffect words={typeWriterWords} />

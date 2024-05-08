@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin')
 const svgToDataUri = require("mini-svg-data-uri");
 const {
   default: flattenColorPalette,
@@ -9,7 +10,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "false",
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
@@ -99,6 +100,11 @@ export default {
         'jellyfish': "url('https://cdn.duwub.dev/assets/jellyfish.jpg')",
         'website-bg': "url('https://cdn.duwub.dev/assets/website/shelterVHS.png')",
       },
+      textShadow: {
+        sm: '0 1px 2px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)',
+      },
     },
   },
   plugins: [
@@ -115,6 +121,16 @@ export default {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
+    plugin(function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          'text-shadow': (value: any) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
   ],
 }
 

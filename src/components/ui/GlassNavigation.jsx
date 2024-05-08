@@ -1,6 +1,6 @@
 import { FiMenu, FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
-import { useAnimate, motion } from "framer-motion";
+import { useAnimate, AnimatePresence, motion } from "framer-motion";
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
@@ -103,7 +103,7 @@ const GlassLink = ({ text }) => {
       className="relative px-4 py-2 overflow-hidden transition-transform scale-100 rounded-lg group hover:scale-105 active:scale-95"
       to={textLowercase} spy={true} smooth={true} offset={0} duration={1000}
     >
-      <span className="relative z-10 transition-colors text-white/90 group-hover:text-black dark:group-hover:text-white">
+      <span className="relative z-10 transition-colors text-white/90 group-hover:text-black dark:group-hover:text-white text-shadow shadow-accent-900">
         {text}
       </span>
       <span className="absolute inset-0 z-0 transition-opacity opacity-0 bg-gradient-to-br from-white/20 to-white/5 group-hover:opacity-100" />
@@ -126,7 +126,7 @@ const TopLink = ({ text }) => {
             className="relative px-4 py-2 overflow-hidden transition-transform scale-100 rounded-lg group hover:scale-105 active:scale-95"
             onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}
         >
-            <span className="relative z-10 transition-colors text-white/90 group-hover:text-black dark:group-hover:text-white">
+            <span className="relative z-10 transition-colors text-white/90 group-hover:text-black dark:group-hover:text-white text-shadow shadow-accent-900">
                 {text}
             </span>
             <span className="absolute inset-0 z-0 transition-opacity opacity-0 bg-gradient-to-br from-white/20 to-white/5 group-hover:opacity-100" />
@@ -166,24 +166,28 @@ const Buttons = ({ menuOpen, setMenuOpen }) => (
 
 const MobileMenu = ({ menuOpen }) => {
   return (
-    <motion.div
-      initial={false}
-      animate={{
-        height: menuOpen ? "fit-content" : "0px",
-      }}
-      className="block overflow-hidden md:hidden"
-    >
-      <div className={(menuOpen ? "hidden" : "") + " menu"}>
-        <div className="flex items-center justify-between px-4 pb-4">
-          <div className="flex items-center gap-4">
-            <TopLink text="Home" />
-            <GlassLink text="About" />
-            <GlassLink text="Projects" />
-            {/* <TextLink text="Contact" /> */}
+    <AnimatePresence>
+      {menuOpen && (
+        <motion.div
+          initial={{ maxHeight: 0, opacity: 0 }}
+          animate={{ maxHeight: "100px", opacity: 1 }}
+          exit={{ maxHeight: 0, opacity: 0 }}
+          transition={{ duration: 0.5, ease: "circInOut" }}
+          className="block overflow-hidden md:hidden"
+        >
+          <div className="menu">
+            <div className="flex items-center justify-between px-4 pb-4">
+              <div className="flex items-center gap-4">
+                <TopLink text="Home" />
+                <GlassLink text="About" />
+                <GlassLink text="Projects" />
+                {/* <TextLink text="Contact" /> */}
+              </div>
+              {/* <SignInButton /> */}
+            </div>
           </div>
-          {/* <SignInButton /> */}
-        </div>
-      </div>
-    </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };

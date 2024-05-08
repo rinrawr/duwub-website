@@ -2,7 +2,6 @@ import react, { useEffect } from 'react'
 
 import Hero from './sections/Hero'
 import { Projects }   from './sections/Projects'
-import { StickyCards } from './components/StickyCards'
 
 // import { Nav } from './components/ui/CornerNav'
 import { GlassNavigation } from './components/ui/GlassNavigation'
@@ -38,10 +37,6 @@ function App() {
       <Reveal>
         <Footer />
       </Reveal>
-
-      {/* <Reveal>
-        <StickyCards />
-      </Reveal> */}
     </div>
 
   )
