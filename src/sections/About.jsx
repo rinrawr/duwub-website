@@ -92,7 +92,7 @@ const HeaderBlock = () => (
     <h1 className="mb-12 text-4xl font-medium leading-tight">
       Hi, I'm Dawson.{" "}
       <span className="text-zinc-400">
-        An Alberta-based Junior Full-Stack Developer and Web Designer.
+      A junior full-stack developer and web designer from Canada.
       </span>
     </h1>
     <a
@@ -174,8 +174,9 @@ const AboutBlock = () => (
     <p>
       Embracing the journey of becoming a versatile developer. {" "}
       <span className="text-zinc-400">
-        My passion lies in constantly challenging myself and learning new skills to refine my abilities towards software development as a whole.
+        Currently pursing a Bachelor of Science in Computer Science and working as a Q/A Engineer and Community Manager at {" "}
       </span>
+      <a href="https://imaginary-labs.com" target="_blank" className="text-secondary-300 hover:underline cursor-pointer">Imaginary Labs</a>
     </p>
   </Block>
 );
