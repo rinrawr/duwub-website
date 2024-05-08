@@ -19,7 +19,7 @@ export const About = () => {
   }, [isInView]);
 
   return (
-    <div ref={ref} id='about' className="bottom-0 h-full px-4 py-52 top-2 bg-secondary-300 dark:bg-secondary-900 text-zinc-50">
+    <div ref={ref} id='about' className="bottom-0 h-full px-4 py-52 top-2 bg-secondary-100 dark:bg-secondary-900 text-zinc-50">
       <motion.div
       variants={{
         hidden: {
@@ -74,7 +74,7 @@ const Block = ({ className, ...rest }) => {
           damping: 50,
         }}
         className={twMerge(
-          "col-span-4 rounded-lg border border-zinc-700 bg-background-900 p-6",
+          "col-span-4 rounded-lg border border-zinc-700 bg-secondary-200 dark:bg-background-900 p-6",
           className
         )}
         {...rest}
@@ -89,15 +89,15 @@ const HeaderBlock = () => (
       alt="avatar"
       className="object-cover mb-4 rounded-full size-14"
     />
-    <h1 className="mb-12 text-4xl font-medium leading-tight">
+    <h1 className="mb-12 text-4xl text-black dark:text-white font-medium leading-tight">
       Hi, I'm Dawson.{" "}
-      <span className="text-zinc-400">
+      <span className="dark:text-zinc-400 text-zinc-500">
       A junior full-stack developer and web designer from Canada.
       </span>
     </h1>
     <a
       href="mailto:dawson@duwub.dev"
-      className="flex items-center gap-1 text-red-300 hover:underline"
+      className="flex items-center gap-1 dark:text-red-300 text-red-600 hover:underline"
     >
       Contact me <FiArrowRight />
     </a>
@@ -170,28 +170,28 @@ const SocialsBlock = () => (
 );
 
 const AboutBlock = () => (
-  <Block className="col-span-12 text-3xl leading-snug">
+  <Block className="col-span-12 text-3xl leading-snug text-black dark:text-white">
     <p>
       Embracing the journey of becoming a versatile developer. {" "}
-      <span className="text-zinc-400">
+      <span className="dark:text-zinc-400 text-zinc-500">
         Currently pursing a Bachelor of Science in Computer Science and working as a Q/A Engineer and Community Manager at {" "}
       </span>
-      <a href="https://imaginary-labs.com" target="_blank" className="text-secondary-300 hover:underline cursor-pointer">Imaginary Labs</a>
+      <a href="https://imaginary-labs.com" target="_blank" className="dark:text-secondary-300 text-secondary-600 hover:underline cursor-pointer">Imaginary Labs</a>
     </p>
   </Block>
 );
 
 const LocationBlock = () => (
   <Block className="flex flex-col items-center col-span-12 gap-4 md:col-span-3">
-    <FiMapPin className="text-3xl" />
-    <p className="text-lg text-center text-zinc-400">Calgary, AB</p>
+    <FiMapPin className="text-3xl dark:text-white text-black" />
+    <p className="text-lg text-center dark:text-zinc-400 text-zinc-500">Calgary, AB</p>
   </Block>
 );
 
 const EmailListBlock = () => (
   <Block className="col-span-12 md:col-span-9">
-    <p className="mb-3 text-lg">Skills:</p>
-    <p className="flex flex-wrap gap-2 text-md text-text-100">Python, Java, HTML, CSS, JavaScript, React, ZenDesk, Unreal Engine</p>
+    <p className="mb-3 text-lg dark:text-white text-black">Skills:</p>
+    <p className="flex flex-wrap gap-2 text-md dark:text-text-100 text-text-800">Python, Java, HTML, CSS, JavaScript, React, ZenDesk, Unreal Engine</p>
     {/* <form
       onSubmit={(e) => e.preventDefault()}
       className="flex items-center gap-2"

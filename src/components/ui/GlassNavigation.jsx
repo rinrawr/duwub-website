@@ -1,38 +1,22 @@
 import { FiMenu, FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
-import { useAnimate, motion } from "framer-motion";
+import { useAnimate, AnimatePresence, motion } from "framer-motion";
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { DarkModeToggle } from "../ui/toggles/DarkModeToggle";
 
 
 export const GlassNavigation = () => {
   const [hovered, setHovered] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mode, setMode] = useState('dark');
 
   const [scope, animate] = useAnimate();
   const navRef = useRef(null);
 
-  const handleMouseMove = ({ offsetX, offsetY, target }) => {
-    // @ts-ignore
-    const isNavElement = [...target.classList].includes("glass-nav");
-
-    if (isNavElement) {
-      setHovered(true);
-
-      const top = offsetY + "px";
-      const left = offsetX + "px";
-
-      animate(scope.current, { top, left }, { duration: 0 });
-    } else {
-      setHovered(false);
-    }
-  };
-
   useEffect(() => {
-    navRef.current?.addEventListener("mousemove", handleMouseMove);
-
-    return () =>
-      navRef.current?.removeEventListener("mousemove", handleMouseMove);
+    document.body.classList.add("dark");
   }, []);
+
 
   return (
     <motion.nav
@@ -41,7 +25,7 @@ export const GlassNavigation = () => {
     //   style={{
     //     cursor: hovered ? "none" : "auto",
     //   }}
-      className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-white/10 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl"
+      className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-white/10 bg-gradient-to-br from-white/20 to-white/5 backdrop-blur dark:background-brightness-100 backdrop-brightness-75 md:left-6 md:right-6 md:top-6 md:rounded-2xl"
       initial={{ opacity: 0, scale: 0.95, y: -120 }} // initial state
       animate={{ opacity: 1, scale: 1, y: 0 }} // animate to
       transition={{ duration: 0.8, delay: 1, ease: "circInOut" }} // transition settings
@@ -54,6 +38,8 @@ export const GlassNavigation = () => {
         {/* <Logo /> */}
 
         <Buttons setMenuOpen={setMenuOpen} />
+        <DarkModeToggle mode={mode} setMode={setMode} />
+
       </div>
 
       <MobileMenu menuOpen={menuOpen} className='z-50'/>
@@ -103,7 +89,7 @@ const GlassLink = ({ text }) => {
       className="relative px-4 py-2 overflow-hidden transition-transform scale-100 rounded-lg group hover:scale-105 active:scale-95"
       to={textLowercase} spy={true} smooth={true} offset={0} duration={1000}
     >
-      <span className="relative z-10 transition-colors text-white/90 group-hover:text-white">
+      <span className="relative z-10 transition-colors text-white/90 group-hover:text-black dark:group-hover:text-white text-shadow shadow-accent-900">
         {text}
       </span>
       <span className="absolute inset-0 z-0 transition-opacity opacity-0 bg-gradient-to-br from-white/20 to-white/5 group-hover:opacity-100" />
@@ -126,7 +112,7 @@ const TopLink = ({ text }) => {
             className="relative px-4 py-2 overflow-hidden transition-transform scale-100 rounded-lg group hover:scale-105 active:scale-95"
             onClick={() => window.scroll({ top: 0, left: 0, behavior: 'smooth' })}
         >
-            <span className="relative z-10 transition-colors text-white/90 group-hover:text-white">
+            <span className="relative z-10 transition-colors text-white/90 group-hover:text-black dark:group-hover:text-white text-shadow shadow-accent-900">
                 {text}
             </span>
             <span className="absolute inset-0 z-0 transition-opacity opacity-0 bg-gradient-to-br from-white/20 to-white/5 group-hover:opacity-100" />
@@ -166,24 +152,28 @@ const Buttons = ({ menuOpen, setMenuOpen }) => (
 
 const MobileMenu = ({ menuOpen }) => {
   return (
-    <motion.div
-      initial={false}
-      animate={{
-        height: menuOpen ? "fit-content" : "0px",
-      }}
-      className="block overflow-hidden md:hidden"
-    >
-      <div className={(menuOpen ? "hidden" : "") + " menu"}>
-        <div className="flex items-center justify-between px-4 pb-4">
-          <div className="flex items-center gap-4">
-            <TopLink text="Home" />
-            <GlassLink text="About" />
-            <GlassLink text="Projects" />
-            {/* <TextLink text="Contact" /> */}
+    <AnimatePresence>
+      {menuOpen && (
+        <motion.div
+          initial={{ maxHeight: 0, opacity: 0 }}
+          animate={{ maxHeight: "100px", opacity: 1 }}
+          exit={{ maxHeight: 0, opacity: 0 }}
+          transition={{ duration: 0.5, ease: "circInOut" }}
+          className="block overflow-hidden md:hidden"
+        >
+          <div className="menu">
+            <div className="flex items-center justify-between px-4 pb-4">
+              <div className="flex items-center gap-4">
+                <TopLink text="Home" />
+                <GlassLink text="About" />
+                <GlassLink text="Projects" />
+                {/* <TextLink text="Contact" /> */}
+              </div>
+              {/* <SignInButton /> */}
+            </div>
           </div>
-          {/* <SignInButton /> */}
-        </div>
-      </div>
-    </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
