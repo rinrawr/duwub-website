@@ -89,7 +89,7 @@ const cards = [
     content: <SkeletonThree />,
     className: "col-span-1",
     thumbnail:
-      "https://cdn.duwub.dev/assets/jellyfish.jpg",
+      "https://cdn.duwub.dev/assets/random-imgs/jellybruh.png",
   },
   {
     id: 4,
