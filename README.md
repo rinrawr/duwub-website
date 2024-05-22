@@ -1,8 +1,7 @@
-# React + Vite
+# duwub Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is V2 of duwub's portfolio which is written in React.js using Vite.js as the build tool. 
 
-Currently, two official plugins are available:
+The site is primarily used to showcase personal and professional projects and as a central place to host all my links.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It is still heavily work in progress as I slowly gain more web development skills.
