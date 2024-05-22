@@ -86,9 +86,9 @@ const Block = ({ className, ...rest }) => {
 const HeaderBlock = () => (
   <Block  className="col-span-12 row-span-2 md:col-span-6">
     <img
-      src="https://cdn.duwub.dev/assets/jellyfish.jpg"
+      src="https://cdn.duwub.dev/assets/website/icon-kano_bruh.png"
       alt="avatar"
-      className="object-cover mb-4 rounded-full size-14"
+      className="object-cover mb-4 rounded-full size-20"
     />
     <h1 className="mb-12 text-4xl text-black dark:text-white font-medium leading-tight">
       Hi, I'm Dawson.{" "}

@@ -6,7 +6,7 @@ import { Reveal } from '../../utils/Reveal';
 
 interface Props {
   modalContent: JSX.Element;
-  description: string;
+  description?: string;
   projectLink: string;
   imgSrc: string;
   tech: string[];
