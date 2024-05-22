@@ -5,7 +5,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 export const Footer = () => {
   return (
-    <div class="text-center bottom-0 py-5 w-full left-0 bg-background-50 dark:bg-background-950">
+    <div class="text-center bottom-0 py-5 w-full left-0 bg-background-50 dark:bg-background-950 transition-colors duration-1000">
         <span class="block text-sm text-center text-text-200 dark:text-slate-600">     <p className="text-center text-text-950 dark:text-zinc-400">
         Made with ❤️ by{" "}
         <a href="#" className="text-primary-500 hover:underline">

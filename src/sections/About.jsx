@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import { SiLinkedin, SiLastdotfm, SiTwitter, SiYoutube } from "react-icons/si";
 import { Footer } from '../components/Footer';
+import { Reveal } from '../utils/Reveal';
 
 export const About = () => {
 
@@ -19,7 +20,7 @@ export const About = () => {
   }, [isInView]);
 
   return (
-    <div ref={ref} id='about' className="bottom-0 h-full px-4 py-52 top-2 bg-secondary-100 dark:bg-secondary-900 text-zinc-50">
+    <div ref={ref} id='about' className="bottom-0 h-full px-4 py-52 top-2 bg-secondary-100 dark:bg-secondary-900 text-zinc-50 transition-colors duration-1000">
       <motion.div
       variants={{
         hidden: {
@@ -74,7 +75,7 @@ const Block = ({ className, ...rest }) => {
           damping: 50,
         }}
         className={twMerge(
-          "col-span-4 rounded-lg border border-zinc-700 bg-secondary-200 dark:bg-background-900 p-6",
+          "col-span-4 w-full rounded-lg border border-zinc-700 bg-secondary-200 dark:bg-background-900 p-6 transition-colors duration-1000",
           className
         )}
         {...rest}
@@ -111,7 +112,7 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-red-500 md:col-span-3"
+      className="col-span-6 bg-red-500 dark:bg-red-700 md:col-span-3"
     >
       <a
         href="https://www.youtube.com/@drawrb"
@@ -126,7 +127,7 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-teal-500 md:col-span-3"
+      className="col-span-6 bg-teal-500 dark:bg-teal-700 md:col-span-3"
     >
       <a
         href="https://www.linkedin.com/in/dwsnb"
@@ -141,7 +142,7 @@ const SocialsBlock = () => (
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-black md:col-span-3"
+      className="col-span-6 bg-slate-800 dark:bg-black md:col-span-3"
     >
       <a
         href="https://www.last.fm/user/duwub"
@@ -156,7 +157,7 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-blue-500 md:col-span-3"
+      className="col-span-6 bg-blue-500 dark:bg-blue-700 md:col-span-3"
     >
       <a
         href="https://twitter.com/DUWUBrawr"

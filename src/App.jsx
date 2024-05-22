@@ -1,7 +1,7 @@
 import react, { useEffect } from 'react'
 
 import Hero from './sections/Hero'
-import { Projects }   from './sections/Projects'
+import { Projects }   from './components/Projects/Projects' 
 
 // import { Nav } from './components/ui/CornerNav'
 import { GlassNavigation } from './components/ui/GlassNavigation'
@@ -20,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className=''>
       {/* <Nav /> */}
 
       <GlassNavigation />
@@ -31,7 +31,9 @@ function App() {
       <About/>
 
       <Reveal>
-        <Projects />
+        <div className='w-full dark:bg-accent-950 bg-purple-200 transition-colors duration-1000'>
+          <div className='mx-auto max-w-5xl px-4 py-8 md:px-8 space-y-32 pb-24'><Projects/></div>
+        </div>
       </Reveal>
 
       <Reveal>
