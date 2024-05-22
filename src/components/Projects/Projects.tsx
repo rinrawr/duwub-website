@@ -44,6 +44,14 @@ const projects = [
         A re-imagining of my original 2021 entry which was one of the winning submissions. A creative project that utilized the Carbon for Unreal
         plugin to create a unique outdoor show.
         </p>
+        <h1 className="font-semibold text-lg dark:text-accent-100 text-accent-800">Fixture List<span className="dark:text-primary-500 text-pink-700">. </span></h1>
+        <ul>
+          <li>&#8226; 40x Ayrton Cobra</li>
+          <li>&#8226; 48x Ayrton Domino</li>
+          <li>&#8226; 60x GLP Impression X4 XL</li>
+          <li>&#8226; 24x Robe Megapointe</li>
+          <li>&#8226; 60x Custom Outdoor Wash</li>
+        </ul>
       </>
     ),
   },

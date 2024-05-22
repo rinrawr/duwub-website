@@ -37,7 +37,7 @@ export const ProjectModal = ({
 
   const content = (
     <div
-      className="fixed inset-0 z-50 px-4 py-12 bg-zinc-950/50 backdrop-blur overflow-y-scroll flex justify-center cursor-pointer"
+      className="fixed inset-0 z-50 px-4 py-12 bg-background-800/50 backdrop-blur overflow-y-scroll flex justify-center cursor-pointer"
       onClick={() => setIsOpen(false)}
     >
       <button className="absolute top-4 md:top-6 text-xl right-4">
@@ -67,7 +67,7 @@ export const ProjectModal = ({
 
           <div>
             <p className="font-bold mb-2 text-xl dark:text-text-50">
-              Project Links<span className="text-indigo-500">.</span>
+              Project Links<span className="dark:text-primary-500 text-pink-700">. </span>
             </p>
             <div className="flex items-center gap-4 text-sm">
             {code && (
