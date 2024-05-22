@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="assets/icon.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="https://cdn.duwub.dev/assets/website/Website_Background.jpg" property="og:image" />
+    <meta name="twitter:card" content="https://cdn.duwub.dev/assets/website/Website_Background.jpg">
+    <link rel="stylesheet" href="assets\css\style.css">
+    <link rel="stylesheet" href="assets\css\tailwind.css">
+    <script src="https://kit.fontawesome.com/a000e57acd.js" crossorigin="anonymous"></script>
+    <title>about</title>
+
+  </head>
+
+  <body data-nav="false">
+    <div class="preloader">
+      <div class="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div class="headerbar">
+      <!-- Menu Button -->
+      <a onclick="toggleNav()" class="MenuButton" target="_blank">
+        <!-- Glow -->
+        <div class="MenuButton__glowWrap l"><span class="MenuButton__glow"></span></div>
+        <div class="MenuButton__glowWrap r"><span class="MenuButton__glow"></span></div>
+        <!-- /Glow -->
+        <!-- Overlay -->
+        <span class="MenuButton__overlay"></span>
+        <!-- Overlay -->
+        <!-- Content -->
+        <div class="MenuButton__content">
+          <span class="fa-solid fa-bars"></span>
+          <span class="fa-solid fa-angles-down"></span>  
+        </div>
+        <!-- /Content -->
+        </a>
+    <!-- /The Glow Button -->
+    </div>
+
+  </body>
+
+
+  <main>
+    
+    <div>
+        <section class="about">
+
+            <h1>About Me</h1>
+
+            <h2 class="text-white text-md md:text-2xl mix-blend-exclusion animate-fadeIn z-50 justify-center text-center">My name is Dawson Becker and I am a beginner software developer and lighting designer.
+              I am currently pursuing a degree in Computer Science and enhancing my programming and design abilities.
+              Besides my academic work, I also work as a Q/A Engineer and Support Agent at Imaginary Labs,
+              a company that creates innovative solutions for the live events industry.
+            </h2>
+
+
+          
+        </section>
+    </div>
+
+    <div class="canvas">
+      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.55/build/spline-viewer.js"></script>
+      <spline-viewer class="-mt-8" url="https://prod.spline.design/f-fOQr9TdgnK-lof/scene.splinecode"></spline-viewer>
+    </div>
+
+
+  </main>
+
+    
+  <nav id="nav-menu">
+
+    <div id="nav-links">
+
+      <a class="nav-link" href="/">
+        <img class="nav-link-image" src="https://cdn.duwub.dev/assets/website/Website_Background.jpg">        
+          <h2 class="nav-link-label">Home</h2>
+        </img>
+      </a>
+
+      <a class="nav-link" href="https://www.youtube.com/@drawrb/videos" target="_blank">
+        <img class="nav-link-image" src="https://cdn.duwub.dev/assets/jellyfish.jpg">
+          <h2 class="nav-link-label">Projects</h2>
+        </img>
+      </a>
+
+      <a class="nav-link" href="about">
+        <img class="nav-link-image" src="assets\about.gif">
+          <h2 class="nav-link-label">About</h2>
+        </img>
+      </a>
+
+    </div>
+  </nav>
+
+    <script src="/js/navMenu.js"></script>
+    <script src="/js/loader.js"></script>
+    <script src="/js/menuButton.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+
+  </body>
+  
+</html>
+
+
