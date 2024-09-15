@@ -98,7 +98,7 @@ export default {
       },
       backgroundImage: {
         'jellyfish': "url('https://cdn.duwub.dev/assets/jellyfish.jpg')",
-        'website-bg': "url('https://cdn.duwub.dev/assets/website/shelterVHS.png')",
+        'website-bg': "url('https://cdn.duwub.dev/assets/resources/backgrounds/metalheart1_ntsc.png')",
       },
       textShadow: {
         sm: '0 1px 2px var(--tw-shadow-color)',
