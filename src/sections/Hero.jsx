@@ -12,7 +12,7 @@ import { WavyBackground } from "../components/ui/wavyBackground";
 import { motion } from "framer-motion"
 import React from 'react'
 
-const subHeaderWords = `struggling to write functional code`;
+const subHeaderWords = `some people die of nostalgia`;
 const typeWriterWords = [
   {
     text: "Junior",

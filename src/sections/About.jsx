@@ -91,7 +91,7 @@ const HeaderBlock = () => (
       className="object-cover mb-4 rounded-full size-20"
     />
     <h1 className="mb-12 text-4xl text-black dark:text-white font-medium leading-tight">
-      Hi, I'm Dawson.{" "}
+      Hi! I'm Rin.{" "}
       <span className="dark:text-zinc-400 text-zinc-500">
       A junior full-stack developer and web designer from Canada.
       </span>
