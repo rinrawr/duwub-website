@@ -2,7 +2,7 @@ import React, {useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiLinkedin, SiLastdotfm, SiTwitter, SiYoutube } from "react-icons/si";
+import { SiLinkedin, SiLastdotfm, SiTwitter, SiYoutube, SiBluesky } from "react-icons/si";
 import { Footer } from '../components/Footer';
 import { Reveal } from '../utils/Reveal';
 
@@ -157,14 +157,14 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-blue-500 dark:bg-blue-700 md:col-span-3"
+      className="col-span-6 bg-blue-300 dark:bg-blue-600 md:col-span-3"
     >
       <a
-        href="https://twitter.com/DUWUBrawr"
+        href="https://bsky.app/profile/duwub.dev"
         target="_blank"
         className="grid h-full text-3xl text-white place-content-center"
       >
-        <SiTwitter />
+        <SiBluesky />
       </a>
     </Block>
   </>
@@ -173,7 +173,6 @@ const SocialsBlock = () => (
 const AboutBlock = () => (
   <Block className="col-span-12 text-3xl leading-snug text-black dark:text-white">
     <p>
-      Embracing the journey of becoming a versatile developer. {" "}
       <span className="dark:text-zinc-400 text-zinc-500">
         Currently pursing a Bachelor of Science in Computer Science and working as a Q/A Engineer and Community Manager at {" "}
       </span>
