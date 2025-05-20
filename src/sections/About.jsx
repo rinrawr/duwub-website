@@ -2,7 +2,7 @@ import React, {useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
-import { SiLinkedin, SiLastdotfm, SiTwitter, SiYoutube, SiBluesky } from "react-icons/si";
+import { SiLinkedin, SiLastdotfm, SiTwitter, SiYoutube, SiInstagram } from "react-icons/si";
 import { Footer } from '../components/Footer';
 import { Reveal } from '../utils/Reveal';
 
@@ -157,14 +157,14 @@ const SocialsBlock = () => (
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-blue-300 dark:bg-blue-600 md:col-span-3"
+      className="col-span-6 bg-orange-500 dark:bg-purple-600 md:col-span-3"
     >
       <a
-        href="https://bsky.app/profile/duwub.dev"
+        href="https://www.instagram.com/duwub.jpeg/"
         target="_blank"
         className="grid h-full text-3xl text-white place-content-center"
       >
-        <SiBluesky />
+        <SiInstagram />
       </a>
     </Block>
   </>
